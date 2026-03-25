@@ -9,13 +9,18 @@ export default function AdminPage() {
       <div style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
         <SectionCard title="Sources">
           <p style={{ color: '#cfd7ef' }}>Manage canonical, candidate, observed, and personal sources.</p>
-          <Link href="/admin/sources" style={{ color: '#a8b6ff' }}>Open sources</Link>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/admin/sources" style={{ color: '#a8b6ff' }}>Open sources</Link>
+          </div>
         </SectionCard>
         <SectionCard title="Narratives">
           <p style={{ color: '#cfd7ef' }}>Create and edit narratives, claims, evidence, counterpoints, and action signals.</p>
-          <Link href="/admin/narratives" style={{ color: '#a8b6ff' }}>Open narratives</Link>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/admin/narratives" style={{ color: '#a8b6ff' }}>Open narratives</Link>
+            <Link href="/admin/narratives/new" style={{ color: '#a8b6ff' }}>New narrative</Link>
+          </div>
         </SectionCard>
-              <SectionCard title="Quick create">
+        <SectionCard title="Quick create">
           <p style={{ color: '#cfd7ef' }}>Add first operational records directly.</p>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/admin/claims/new" style={{ color: '#a8b6ff' }}>New claim</Link>
