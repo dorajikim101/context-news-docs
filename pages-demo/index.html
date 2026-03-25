@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Context News Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Static Demo</p>
+      <h1>Context News Demo</h1>
+      <p class="sub">GitHub Pages에서 바로 볼 수 있도록 만든 정적 데모다. 서사를 기사보다 상위 단위로 보고, 상태, 변화, claims, counterpoints, action signals, evidence를 함께 읽는 경험을 빠르게 보여준다.</p>
+    </header>
+
+    <section class="grid metrics">
+      <div class="metric"><div class="label">Narratives</div><div class="value">2</div><div class="hint">Current mock set</div></div>
+      <div class="metric"><div class="label">Rising</div><div class="value">2</div><div class="hint">Positive recent delta</div></div>
+      <div class="metric"><div class="label">Contested</div><div class="value">1</div><div class="hint">Needs active counter-reading</div></div>
+      <div class="metric"><div class="label">Mode</div><div class="value">Static</div><div class="hint">GitHub Pages compatible</div></div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2 class="card-title">Crypto Policy Pivot</h2>
+        <div class="row">
+          <div class="col-main">
+            <div class="meta">
+              <span class="badge contested">contested</span>
+              <span class="delta-up">+4</span>
+              <span class="hint">Attention score 19</span>
+            </div>
+            <p class="sub" style="margin:0 0 10px; max-width:none;">U.S. policy tone toward crypto may be improving, but implementation durability remains contested.</p>
+            <div class="chips">
+              <span class="chip">policy tone shift</span>
+              <span class="chip">regulatory durability</span>
+            </div>
+            <a href="./narratives/crypto-policy-pivot.html">Open demo narrative</a>
+          </div>
+          <div class="col-side">
+            <svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,20 50,10 75,25 100,5" /></svg>
+            <div class="hint">Claims 2 · Counterpoints 2 · Evidence 3</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">AI Infra Overbuild</h2>
+        <div class="row">
+          <div class="col-main">
+            <div class="meta">
+              <span class="badge growing">growing</span>
+              <span class="delta-up">+4</span>
+              <span class="hint">Attention score 22</span>
+            </div>
+            <p class="sub" style="margin:0 0 10px; max-width:none;">AI infrastructure spending is accelerating faster than proven monetization, strengthening the overbuild narrative.</p>
+            <div class="chips">
+              <span class="chip">infra capex</span>
+              <span class="chip">monetization lag</span>
+            </div>
+            <a href="./narratives/ai-infra-overbuild.html">Open demo narrative</a>
+          </div>
+          <div class="col-side">
+            <svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,34 50,22 75,10 100,0" /></svg>
+            <div class="hint">Claims 2 · Counterpoints 2 · Evidence 3</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
