@@ -1,13 +1,20 @@
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
 export const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN || 'dev-admin-token';
 
-export async function apiGet(path: string) {
-  const res = await fetch(`${API_BASE_URL}${path}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error(`GET ${path} failed`);
+async function parseJson<T>(res: Response): Promise<T> {
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || `Request failed: ${res.status}`);
+  }
   return res.json();
 }
 
-export async function apiPost(path: string, body: unknown) {
+export async function apiGet<T>(path: string): Promise<T> {
+  const res = await fetch(`${API_BASE_URL}${path}`, { cache: 'no-store' });
+  return parseJson<T>(res);
+}
+
+export async function apiPost<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`${API_BASE_URL}${path}`, {
     method: 'POST',
     headers: {
@@ -16,6 +23,28 @@ export async function apiPost(path: string, body: unknown) {
     },
     body: JSON.stringify(body),
   });
-  if (!res.ok) throw new Error(`POST ${path} failed`);
-  return res.json();
+  return parseJson<T>(res);
 }
+
+export type Narrative = {
+  id: string;
+  title: string;
+  slug: string;
+  one_line_summary?: string | null;
+  state: string;
+  attention_score?: number;
+  attention_share?: number;
+  conviction_score?: number;
+  conviction_share?: number;
+  confidence_score?: number;
+};
+
+export type Source = {
+  id: string;
+  name: string;
+  slug: string;
+  source_type: string;
+  source_status: string;
+  base_weight: number;
+  active: boolean;
+};
