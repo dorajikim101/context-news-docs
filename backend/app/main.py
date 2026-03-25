@@ -8,6 +8,8 @@ from app.api.routes.action_signals import router as action_signals_router
 from app.api.routes.public import router as public_router
 from app.api.routes.overview import router as overview_router
 from app.api.routes.preferences import router as preferences_router
+from app.api.routes.relations import router as relations_router
+from app.api.routes.snapshots import router as snapshots_router
 
 app = FastAPI(title="Context News API", version="0.1.0")
 
@@ -20,6 +22,8 @@ app.include_router(action_signals_router)
 app.include_router(public_router)
 app.include_router(overview_router)
 app.include_router(preferences_router)
+app.include_router(relations_router)
+app.include_router(snapshots_router)
 
 
 @app.get("/health")
