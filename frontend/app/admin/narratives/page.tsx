@@ -30,7 +30,7 @@ export default async function AdminNarrativesPage() {
             <SectionCard key={item.id} title={item.title}>
               <p style={{ color: '#cfd7ef' }}>State: {item.state}</p>
               <p style={{ color: '#9aa5c8' }}>{item.one_line_summary || 'No summary yet.'}</p>
-              <Link href={`/narratives/${item.slug}`} style={{ color: '#a8b6ff' }}>Preview public page</Link>
+              <div style={{ display: 'grid', gap: 8 }}><Link href={`/admin/narratives/${item.id}`} style={{ color: '#a8b6ff' }}>Open admin detail</Link><Link href={`/narratives/${item.slug}`} style={{ color: '#a8b6ff' }}>Preview public page</Link></div>
             </SectionCard>
           ))}
         </div>
