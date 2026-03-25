@@ -29,7 +29,7 @@ export default function AdminPage() {
             <Link href="/admin/action-signals/new" style={{ color: '#a8b6ff' }}>New action signal</Link>
           </div>
         </SectionCard>
-      </div>
+            <div style={{ marginTop: 16 }}><Link href='/settings/sources' style={{ color: '#a8b6ff' }}>Open source preferences demo</Link></div>
     </main>
   );
 }
