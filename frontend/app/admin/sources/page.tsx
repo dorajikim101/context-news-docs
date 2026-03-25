@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { SectionCard } from '../../../components/SectionCard';
 
 const rows = [
@@ -10,6 +11,7 @@ export default function AdminSourcesPage() {
   return (
     <main style={{ maxWidth: 1040, margin: '0 auto', padding: '48px 24px' }}>
       <h1>Admin / Sources</h1>
+      <p><Link href='/admin/sources/new' style={{ color: '#a8b6ff' }}>Create new source</Link></p>
       <SectionCard title="Source List">
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>

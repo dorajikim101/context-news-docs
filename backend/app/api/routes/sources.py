@@ -2,6 +2,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.api.deps import get_db
+from app.api.admin_deps import require_admin
 from app.models.source import Source
 from app.schemas.source import SourceCreate, SourceRead, SourceUpdate
 
@@ -14,7 +15,7 @@ def list_sources(db: Session = Depends(get_db)):
 
 
 @router.post("", response_model=SourceRead)
-def create_source(payload: SourceCreate, db: Session = Depends(get_db)):
+def create_source(payload: SourceCreate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     source = Source(**payload.model_dump())
     db.add(source)
     db.commit()
@@ -23,7 +24,7 @@ def create_source(payload: SourceCreate, db: Session = Depends(get_db)):
 
 
 @router.patch("/{source_id}", response_model=SourceRead)
-def update_source(source_id: UUID, payload: SourceUpdate, db: Session = Depends(get_db)):
+def update_source(source_id: UUID, payload: SourceUpdate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     source = db.get(Source, source_id)
     if not source:
         raise HTTPException(status_code=404, detail="Source not found")

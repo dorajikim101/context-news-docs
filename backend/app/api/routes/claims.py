@@ -2,6 +2,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.api.deps import get_db
+from app.api.admin_deps import require_admin
 from app.models.claim import Claim
 from app.schemas.claim import ClaimCreate, ClaimRead, ClaimUpdate
 
@@ -14,7 +15,7 @@ def list_claims(db: Session = Depends(get_db)):
 
 
 @router.post("", response_model=ClaimRead)
-def create_claim(payload: ClaimCreate, db: Session = Depends(get_db)):
+def create_claim(payload: ClaimCreate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     claim = Claim(**payload.model_dump())
     db.add(claim)
     db.commit()
@@ -23,7 +24,7 @@ def create_claim(payload: ClaimCreate, db: Session = Depends(get_db)):
 
 
 @router.patch("/{claim_id}", response_model=ClaimRead)
-def update_claim(claim_id: UUID, payload: ClaimUpdate, db: Session = Depends(get_db)):
+def update_claim(claim_id: UUID, payload: ClaimUpdate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     claim = db.get(Claim, claim_id)
     if not claim:
         raise HTTPException(status_code=404, detail="Claim not found")

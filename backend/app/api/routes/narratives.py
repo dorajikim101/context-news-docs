@@ -2,6 +2,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.api.deps import get_db
+from app.api.admin_deps import require_admin
 from app.models.narrative import Narrative
 from app.schemas.narrative import NarrativeCreate, NarrativeRead, NarrativeUpdate
 
@@ -22,7 +23,7 @@ def get_narrative(narrative_id: UUID, db: Session = Depends(get_db)):
 
 
 @router.post("", response_model=NarrativeRead)
-def create_narrative(payload: NarrativeCreate, db: Session = Depends(get_db)):
+def create_narrative(payload: NarrativeCreate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     narrative = Narrative(**payload.model_dump())
     db.add(narrative)
     db.commit()
@@ -31,7 +32,7 @@ def create_narrative(payload: NarrativeCreate, db: Session = Depends(get_db)):
 
 
 @router.patch("/{narrative_id}", response_model=NarrativeRead)
-def update_narrative(narrative_id: UUID, payload: NarrativeUpdate, db: Session = Depends(get_db)):
+def update_narrative(narrative_id: UUID, payload: NarrativeUpdate, db: Session = Depends(get_db), _: None = Depends(require_admin)):
     narrative = db.get(Narrative, narrative_id)
     if not narrative:
         raise HTTPException(status_code=404, detail="Narrative not found")

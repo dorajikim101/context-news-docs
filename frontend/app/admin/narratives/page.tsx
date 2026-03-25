@@ -10,6 +10,7 @@ export default function AdminNarrativesPage() {
   return (
     <main style={{ maxWidth: 1040, margin: '0 auto', padding: '48px 24px' }}>
       <h1>Admin / Narratives</h1>
+      <p><Link href='/admin/narratives/new' style={{ color: '#a8b6ff' }}>Create new narrative</Link></p>
       <div style={{ display: 'grid', gap: 16 }}>
         {narratives.map(([title, state, slug]) => (
           <SectionCard key={slug} title={title}>

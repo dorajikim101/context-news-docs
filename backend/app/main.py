@@ -5,6 +5,7 @@ from app.api.routes.claims import router as claims_router
 from app.api.routes.evidence import router as evidence_router
 from app.api.routes.counterpoints import router as counterpoints_router
 from app.api.routes.action_signals import router as action_signals_router
+from app.api.routes.public import router as public_router
 
 app = FastAPI(title="Context News API", version="0.1.0")
 
@@ -14,6 +15,7 @@ app.include_router(claims_router)
 app.include_router(evidence_router)
 app.include_router(counterpoints_router)
 app.include_router(action_signals_router)
+app.include_router(public_router)
 
 
 @app.get("/health")
