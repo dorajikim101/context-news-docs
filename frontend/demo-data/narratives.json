@@ -1,0 +1,54 @@
+[
+  {
+    "id": "n1",
+    "title": "Crypto Policy Pivot",
+    "slug": "crypto-policy-pivot",
+    "one_line_summary": "U.S. policy tone toward crypto may be improving, but implementation durability remains contested.",
+    "state": "contested",
+    "attention_score": 19,
+    "trend": [12, 16, 18, 15, 19],
+    "claims": [
+      "Recent political and regulatory signals suggest a more accommodative stance toward crypto than in the prior cycle.",
+      "Narrative strength is rising faster than durable implementation proof."
+    ],
+    "counterpoints": [
+      "Political messaging can improve faster than actual regulatory implementation.",
+      "Short-term sentiment may overstate structural policy change."
+    ],
+    "actionSignals": [
+      "Monitor whether softer rhetoric converts into durable rulemaking.",
+      "Track enforcement posture change, not just speeches."
+    ],
+    "evidence": [
+      "SEC communication tone shifts",
+      "Election-cycle policy positioning",
+      "Treasury / regulatory commentary changes"
+    ]
+  },
+  {
+    "id": "n2",
+    "title": "AI Infra Overbuild",
+    "slug": "ai-infra-overbuild",
+    "one_line_summary": "AI infrastructure spending is accelerating faster than proven monetization, strengthening the overbuild narrative.",
+    "state": "growing",
+    "attention_score": 22,
+    "trend": [8, 10, 14, 18, 22],
+    "claims": [
+      "CAPEX into AI infrastructure is outpacing demonstrated downstream revenue capture.",
+      "Power and compute bottlenecks are becoming part of the same narrative cluster."
+    ],
+    "counterpoints": [
+      "Infrastructure often looks excessive before applications catch up.",
+      "The market may be underestimating delayed monetization instead of overbuilding."
+    ],
+    "actionSignals": [
+      "Repeated infra CAPEX allocation",
+      "Power-linked infrastructure becoming a recurring signal"
+    ],
+    "evidence": [
+      "Compute CAPEX research notes",
+      "GPU/infra allocation commentary",
+      "Energy-demand narratives linked to AI buildout"
+    ]
+  }
+]
