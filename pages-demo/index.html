@@ -11,8 +11,60 @@
     <header class="hero">
       <p class="eyebrow">Static Demo</p>
       <h1>Context News Demo</h1>
-      <p class="sub">GitHub Pages에서 바로 볼 수 있도록 만든 정적 데모다. 서사를 기사보다 상위 단위로 보고, 상태, 변화, claims, counterpoints, action signals, evidence를 함께 읽는 경험을 빠르게 보여준다.</p>
+      <p class="sub">서사를 기사보다 상위 단위로 읽게 만드는 컨텍스트 뉴스 데모. 랜딩에서는 먼저 현재 진행 중인 서사 전체의 판세를 한눈에 보여주고, 그 아래에서 개별 서사를 카드 형식으로 풀어본다.</p>
     </header>
+
+    <section class="card" style="margin-bottom: 28px;">
+      <h2 class="card-title">Narrative Overview</h2>
+      <p class="sub" style="margin-top:0; max-width:none;">현재 진행 중인 서사를 하나의 종합 그래프로 먼저 보여주는 랜딩 구조. 실제 제품에서는 여기서 성장, 쇠퇴, 분기, 합류가 더 정교하게 표현된다.</p>
+      <div style="margin-top: 18px; padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+        <svg viewBox="0 0 1000 320" width="100%" height="320" preserveAspectRatio="none" aria-label="Narrative overview graph">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffbf73" stop-opacity="0.7"></stop>
+              <stop offset="100%" stop-color="#ffd49f" stop-opacity="0.45"></stop>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#74d7c3" stop-opacity="0.75"></stop>
+              <stop offset="100%" stop-color="#97f0df" stop-opacity="0.45"></stop>
+            </linearGradient>
+            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#aab7ff" stop-opacity="0.55"></stop>
+              <stop offset="100%" stop-color="#d1d9ff" stop-opacity="0.28"></stop>
+            </linearGradient>
+          </defs>
+
+          <g opacity="0.18">
+            <line x1="120" y1="36" x2="120" y2="285" stroke="#ffffff"></line>
+            <line x1="320" y1="36" x2="320" y2="285" stroke="#ffffff"></line>
+            <line x1="520" y1="36" x2="520" y2="285" stroke="#ffffff"></line>
+            <line x1="720" y1="36" x2="720" y2="285" stroke="#ffffff"></line>
+          </g>
+
+          <path d="M40 110C130 100 214 102 300 126C380 149 442 178 522 176C592 174 648 150 714 142C792 133 876 143 960 164L960 208C878 194 794 191 718 200C650 208 593 229 520 231C439 234 375 209 294 188C214 168 129 165 40 174Z" fill="url(#g1)"></path>
+          <path d="M40 198C134 190 212 182 292 192C362 201 420 223 486 236C564 252 644 248 724 219C798 193 872 165 960 148L960 196C880 212 807 237 732 256C646 279 561 283 476 268C404 256 346 232 282 224C206 214 129 220 40 228Z" fill="url(#g2)"></path>
+          <path d="M520 214C573 196 621 194 666 202C707 209 740 229 776 245C812 261 856 270 908 272C927 273 944 273 960 272L960 304C943 304 925 303 904 301C847 297 798 284 756 266C721 252 692 236 657 231C615 225 572 231 520 246Z" fill="url(#g3)"></path>
+
+          <polyline fill="none" stroke="#ffd8aa" stroke-width="2" points="40,110 160,104 300,126 520,176 714,142 960,164"></polyline>
+          <polyline fill="none" stroke="#9bf0df" stroke-width="2" points="40,198 180,186 292,192 486,236 724,219 960,148"></polyline>
+          <polyline fill="none" stroke="#c4cdff" stroke-width="2" points="520,214 600,198 666,202 776,245 908,272 960,272"></polyline>
+
+          <text x="150" y="96" fill="#ffd7a6" font-size="15">Crypto Policy Pivot</text>
+          <text x="600" y="195" fill="#b2fff0" font-size="15">AI Infra Overbuild</text>
+          <text x="760" y="292" fill="#d2d9ff" font-size="15">Power Constraint Branch</text>
+
+          <text x="105" y="302" fill="#8fa0ca" font-size="13">Week 1</text>
+          <text x="305" y="302" fill="#8fa0ca" font-size="13">Week 2</text>
+          <text x="505" y="302" fill="#8fa0ca" font-size="13">Week 3</text>
+          <text x="705" y="302" fill="#8fa0ca" font-size="13">Week 4</text>
+        </svg>
+      </div>
+      <div class="chips" style="margin-top:16px;">
+        <span class="chip">Overview first</span>
+        <span class="chip">Ongoing narratives</span>
+        <span class="chip">Growth / tension / branching</span>
+      </div>
+    </section>
 
     <section class="grid metrics">
       <div class="metric"><div class="label">Narratives</div><div class="value">2</div><div class="hint">Current mock set</div></div>
