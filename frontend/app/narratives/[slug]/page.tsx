@@ -1,3 +1,4 @@
+import demoNarratives from '../../../demo-data/narratives.json';
 import { SectionCard } from '../../../components/SectionCard';
 import { apiGet, type Narrative } from '../../../lib';
 
@@ -13,6 +14,12 @@ type Overview = {
   action_signals: ActionSignal[];
   evidence: Evidence[];
 };
+
+export function generateStaticParams() {
+  return demoNarratives.map((item) => ({ slug: item.slug }));
+}
+
+export const dynamicParams = false;
 
 export default async function NarrativeDetailPage({ params }: { params: { slug: string } }) {
   let narrative: Narrative | null = null;

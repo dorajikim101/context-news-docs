@@ -1,3 +1,9 @@
+export function generateStaticParams() {
+  return [];
+}
+
+export const dynamicParams = false;
+
 import Link from 'next/link';
 import { SectionCard } from '../../../../components/SectionCard';
 import { API_BASE_URL, ADMIN_TOKEN } from '../../../../lib';
