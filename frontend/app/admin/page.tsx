@@ -15,6 +15,15 @@ export default function AdminPage() {
           <p style={{ color: '#cfd7ef' }}>Create and edit narratives, claims, evidence, counterpoints, and action signals.</p>
           <Link href="/admin/narratives" style={{ color: '#a8b6ff' }}>Open narratives</Link>
         </SectionCard>
+              <SectionCard title="Quick create">
+          <p style={{ color: '#cfd7ef' }}>Add first operational records directly.</p>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/admin/claims/new" style={{ color: '#a8b6ff' }}>New claim</Link>
+            <Link href="/admin/evidence/new" style={{ color: '#a8b6ff' }}>New evidence</Link>
+            <Link href="/admin/counterpoints/new" style={{ color: '#a8b6ff' }}>New counterpoint</Link>
+            <Link href="/admin/action-signals/new" style={{ color: '#a8b6ff' }}>New action signal</Link>
+          </div>
+        </SectionCard>
       </div>
     </main>
   );
