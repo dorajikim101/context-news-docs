@@ -10,6 +10,7 @@ from app.api.routes.overview import router as overview_router
 from app.api.routes.preferences import router as preferences_router
 from app.api.routes.relations import router as relations_router
 from app.api.routes.admin_narratives import router as admin_narratives_router
+from app.api.routes.personalized import router as personalized_router
 from app.api.routes.snapshots import router as snapshots_router
 
 app = FastAPI(title="Context News API", version="0.1.0")
@@ -25,6 +26,7 @@ app.include_router(overview_router)
 app.include_router(preferences_router)
 app.include_router(relations_router)
 app.include_router(admin_narratives_router)
+app.include_router(personalized_router)
 app.include_router(snapshots_router)
 
 
