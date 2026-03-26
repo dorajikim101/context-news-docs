@@ -140,3 +140,41 @@
 4. narrative detail
 
 즉 랜딩은 카드가 먼저가 아니라, **서사 전체 판세를 먼저 보여주는 구조**를 기준으로 한다.
+
+
+## 11. 서사 생명주기와 탈락 규칙
+서사는 영구적으로 메인 그래프에 남지 않는다.
+시간에 따라 생성되고, 성장하고, 약화되고, 탈락하거나 흡수되는 생명주기를 가진다.
+
+### 기본 생명주기
+- Emerging
+- Growing
+- Contested / Stabilizing
+- Fading
+- Dormant / Archived / Absorbed
+
+### 약화 신호
+아래가 겹치면 서사는 점점 하단으로 밀리고 얇아진다.
+- attention 감소
+- conviction 약화
+- confidence 약화
+- 새로운 action signal 부재
+- 새로운 evidence 부재
+
+### 종료/탈락 유형
+#### Dormant
+- 지금은 약하지만 다시 살아날 수 있음
+- 메인 그래프에서는 빠질 수 있으나 히스토리에는 남김
+
+#### Archived
+- 장기간 관심과 실질성이 모두 약함
+- 사실상 종료된 서사
+
+#### Absorbed
+- 독립 서사가 아니라 더 큰 상위 서사에 흡수됨
+
+### 시각적 표현 원칙
+- attention 감소 → 두께 감소
+- conviction / confidence 약화 → 아래로 하강
+- 장기 약세 → 메인 그래프 탈락
+- absorbed → 개별 흐름 종료 후 상위 흐름에 연결 가능
