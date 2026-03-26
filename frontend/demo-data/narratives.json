@@ -23,7 +23,11 @@
       "SEC communication tone shifts",
       "Election-cycle policy positioning",
       "Treasury / regulatory commentary changes"
-    ]
+    ],
+    "layer": "top",
+    "conviction": 0.77,
+    "confidence": 0.56,
+    "keywords": ["policy tone shift", "regulatory durability"]
   },
   {
     "id": "n2",
@@ -49,6 +53,217 @@
       "Compute CAPEX research notes",
       "GPU/infra allocation commentary",
       "Energy-demand narratives linked to AI buildout"
-    ]
+    ],
+    "layer": "top",
+    "conviction": 0.82,
+    "confidence": 0.63,
+    "keywords": ["infra capex", "monetization lag"]
+  },
+  {
+    "id": "n3",
+    "title": "Ethereum ETF Flow Repricing",
+    "slug": "ethereum-etf-flow-repricing",
+    "one_line_summary": "The market is repricing ETH around changing ETF flow expectations and rotation logic.",
+    "state": "growing",
+    "attention_score": 16,
+    "trend": [7, 9, 11, 13, 16],
+    "claims": [
+      "ETF flow expectations are becoming a stronger ETH valuation input.",
+      "Rotation logic from BTC into ETH is being re-discussed under changing macro tone."
+    ],
+    "counterpoints": [
+      "Narrative may be front-running actual sustained flow evidence.",
+      "ETH-specific structural concerns may offset headline ETF optimism."
+    ],
+    "actionSignals": [
+      "Institutional positioning commentary around ETH flows",
+      "Renewed allocator discussion of ETH beta and relative rotation"
+    ],
+    "evidence": [
+      "ETF desk commentary",
+      "Relative rotation notes",
+      "Positioning discussion in institutional crypto research"
+    ],
+    "layer": "mid",
+    "conviction": 0.62,
+    "confidence": 0.48,
+    "keywords": ["ETF flows", "ETH rotation"]
+  },
+  {
+    "id": "n4",
+    "title": "Solana Consumer Breakout",
+    "slug": "solana-consumer-breakout",
+    "one_line_summary": "Consumer-facing apps on Solana are again being framed as the chain's strongest narrative edge.",
+    "state": "growing",
+    "attention_score": 14,
+    "trend": [6, 7, 9, 12, 14],
+    "claims": [
+      "Solana's strongest narrative is shifting from pure speed to consumer app traction.",
+      "Narrative energy is increasingly tied to visible user behavior, not just infra metrics."
+    ],
+    "counterpoints": [
+      "Consumer spikes can remain episodic and fail to become durable platform economics.",
+      "Narrative quality may still depend on speculative bursts rather than retention."
+    ],
+    "actionSignals": [
+      "Ecosystem app launches and user activity bursts",
+      "Community focus rotating toward end-user products"
+    ],
+    "evidence": [
+      "App usage charts",
+      "Ecosystem commentary",
+      "Consumer product launch threads"
+    ],
+    "layer": "mid",
+    "conviction": 0.58,
+    "confidence": 0.42,
+    "keywords": ["consumer apps", "user traction"]
+  },
+  {
+    "id": "n5",
+    "title": "Stablecoin Payments Expansion",
+    "slug": "stablecoin-payments-expansion",
+    "one_line_summary": "Stablecoins are increasingly framed as the most concrete crypto utility narrative, especially in cross-border and platform payments.",
+    "state": "stabilizing",
+    "attention_score": 13,
+    "trend": [10, 11, 12, 13, 13],
+    "claims": [
+      "Stablecoins remain the clearest bridge from crypto rails into real payment usage.",
+      "The market is separating speculative token narratives from durable payment rails."
+    ],
+    "counterpoints": [
+      "Regulatory and banking gatekeepers still constrain mainstream expansion.",
+      "Many payment announcements remain pilot-level rather than structural."
+    ],
+    "actionSignals": [
+      "Platform integrations and payment corridor expansion",
+      "Repeated institutional messaging around settlement rails"
+    ],
+    "evidence": [
+      "Cross-border payments commentary",
+      "Platform integration announcements",
+      "Settlement rail case studies"
+    ],
+    "layer": "mid",
+    "conviction": 0.74,
+    "confidence": 0.66,
+    "keywords": ["stablecoins", "payments rails"]
+  },
+  {
+    "id": "n6",
+    "title": "DePIN Reacceleration",
+    "slug": "depin-reacceleration",
+    "one_line_summary": "DePIN is re-entering conversation as a hardware-linked narrative tied to AI, bandwidth, and edge infrastructure.",
+    "state": "emerging",
+    "attention_score": 9,
+    "trend": [2, 3, 4, 6, 9],
+    "claims": [
+      "DePIN is benefiting from adjacency to AI and infra narratives.",
+      "Hardware-linked token models are being reconsidered under new demand assumptions."
+    ],
+    "counterpoints": [
+      "Many DePIN narratives overstate real adoption and understate capex complexity.",
+      "Revenue quality and token incentive sustainability remain unresolved."
+    ],
+    "actionSignals": [
+      "Renewed founder and VC discussion around DePIN categories",
+      "More infra-linked project comparisons appearing in research"
+    ],
+    "evidence": [
+      "Sector research notes",
+      "VC theses on infra-linked tokens",
+      "Cross-category AI adjacency commentary"
+    ],
+    "layer": "low",
+    "conviction": 0.39,
+    "confidence": 0.28,
+    "keywords": ["DePIN", "infra adjacency"]
+  },
+  {
+    "id": "n7",
+    "title": "Base Ecosystem Acceleration",
+    "slug": "base-ecosystem-acceleration",
+    "one_line_summary": "Base is being reframed as a serious distribution and application layer rather than just another L2 narrative.",
+    "state": "emerging",
+    "attention_score": 11,
+    "trend": [3, 5, 6, 8, 11],
+    "claims": [
+      "Base is increasingly discussed as a distribution engine linked to Coinbase reach.",
+      "Its narrative edge comes from funnel and app surface rather than novel infra alone."
+    ],
+    "counterpoints": [
+      "Narrative may overweight distribution and underweight long-term defensibility.",
+      "It still competes inside a crowded rollup field."
+    ],
+    "actionSignals": [
+      "App launches and onchain campaign activity",
+      "Recurring Coinbase-linked ecosystem narrative support"
+    ],
+    "evidence": [
+      "Onchain activity threads",
+      "Coinbase ecosystem commentary",
+      "L2 competitive analysis"
+    ],
+    "layer": "low",
+    "conviction": 0.44,
+    "confidence": 0.33,
+    "keywords": ["Base", "distribution engine"]
+  },
+  {
+    "id": "n8",
+    "title": "Telegram x TON Consumer Rumor",
+    "slug": "telegram-ton-consumer-rumor",
+    "one_line_summary": "A weaker rumor-layer narrative that Telegram-linked consumer distribution could reignite TON usage expectations.",
+    "state": "emerging",
+    "attention_score": 7,
+    "trend": [1, 2, 2, 4, 7],
+    "claims": [
+      "Telegram distribution may again become a catalyst for TON-adjacent consumer flows.",
+      "Rumor energy is clustering around possible renewed user funnel narratives."
+    ],
+    "counterpoints": [
+      "Most of the current energy is still narrative speculation rather than confirmed rollout.",
+      "Weak-signal chatter can create attention without durable follow-through."
+    ],
+    "actionSignals": [
+      "Mostly discussion-layer chatter with limited verified execution"
+    ],
+    "evidence": [
+      "Community threads",
+      "Speculative ecosystem commentary"
+    ],
+    "layer": "rumor",
+    "conviction": 0.18,
+    "confidence": 0.12,
+    "keywords": ["TON", "consumer rumor"]
+  },
+  {
+    "id": "n9",
+    "title": "Altseason Rotation Chatter",
+    "slug": "altseason-rotation-chatter",
+    "one_line_summary": "A broad low-quality market narrative suggesting imminent alt rotation, driven more by positioning chatter than durable evidence.",
+    "state": "emerging",
+    "attention_score": 10,
+    "trend": [4, 5, 6, 8, 10],
+    "claims": [
+      "Broader risk appetite could spill from majors into weaker beta names.",
+      "Community framing is once again clustering around altseason timing."
+    ],
+    "counterpoints": [
+      "Rotation talk often appears before real liquidity breadth confirms it.",
+      "This narrative historically overpromises breadth and durability."
+    ],
+    "actionSignals": [
+      "Mostly discussion-layer positioning and social chatter"
+    ],
+    "evidence": [
+      "CT threads",
+      "Market sentiment dashboards",
+      "Positioning commentary"
+    ],
+    "layer": "rumor",
+    "conviction": 0.21,
+    "confidence": 0.18,
+    "keywords": ["altseason", "rotation chatter"]
   }
 ]

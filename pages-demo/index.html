@@ -11,114 +11,70 @@
     <header class="hero">
       <p class="eyebrow">Static Demo</p>
       <h1>Context News Demo</h1>
-      <p class="sub">서사를 기사보다 상위 단위로 읽게 만드는 컨텍스트 뉴스 데모. 랜딩에서는 먼저 현재 진행 중인 서사 전체의 판세를 한눈에 보여주고, 그 아래에서 개별 서사를 카드 형식으로 풀어본다.</p>
+      <p class="sub">서사를 기사보다 상위 단위로 읽게 만드는 컨텍스트 뉴스 데모. 랜딩에서는 현재 진행 중인 서사를 전체 판세로 먼저 보여주고, 그 아래에서 개별 서사와 약한 신호, 루머 수준 서사까지 카드로 탐색한다.</p>
     </header>
 
     <section class="card" style="margin-bottom: 28px;">
       <h2 class="card-title">Narrative Overview</h2>
-      <p class="sub" style="margin-top:0; max-width:none;">현재 진행 중인 서사를 하나의 종합 그래프로 먼저 보여주는 랜딩 구조. 실제 제품에서는 여기서 성장, 쇠퇴, 분기, 합류가 더 정교하게 표현된다.</p>
+      <p class="sub" style="margin-top:0; max-width:none;">실제 제품에선 다양한 층위의 서사가 한 그래프에 함께 올라온다. 아래 종합 그래프는 상위 강한 서사부터 낮은 층의 약한 신호/루머성 서사까지 같이 깔리는 모습을 정적으로 표현한 데모다.</p>
       <div style="margin-top: 18px; padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-        <svg viewBox="0 0 1000 320" width="100%" height="320" preserveAspectRatio="none" aria-label="Narrative overview graph">
+        <svg viewBox="0 0 1000 360" width="100%" height="360" preserveAspectRatio="none" aria-label="Narrative overview graph">
           <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#ffbf73" stop-opacity="0.7"></stop>
-              <stop offset="100%" stop-color="#ffd49f" stop-opacity="0.45"></stop>
-            </linearGradient>
-            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#74d7c3" stop-opacity="0.75"></stop>
-              <stop offset="100%" stop-color="#97f0df" stop-opacity="0.45"></stop>
-            </linearGradient>
-            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#aab7ff" stop-opacity="0.55"></stop>
-              <stop offset="100%" stop-color="#d1d9ff" stop-opacity="0.28"></stop>
-            </linearGradient>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffbf73" stop-opacity="0.72"></stop><stop offset="100%" stop-color="#ffd49f" stop-opacity="0.44"></stop></linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#74d7c3" stop-opacity="0.76"></stop><stop offset="100%" stop-color="#97f0df" stop-opacity="0.45"></stop></linearGradient>
+            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8cb1ff" stop-opacity="0.56"></stop><stop offset="100%" stop-color="#d1d9ff" stop-opacity="0.30"></stop></linearGradient>
+            <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b58cff" stop-opacity="0.42"></stop><stop offset="100%" stop-color="#d9cfff" stop-opacity="0.18"></stop></linearGradient>
+            <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8e99b9" stop-opacity="0.32"></stop><stop offset="100%" stop-color="#c6cde3" stop-opacity="0.14"></stop></linearGradient>
           </defs>
-
           <g opacity="0.18">
-            <line x1="120" y1="36" x2="120" y2="285" stroke="#ffffff"></line>
-            <line x1="320" y1="36" x2="320" y2="285" stroke="#ffffff"></line>
-            <line x1="520" y1="36" x2="520" y2="285" stroke="#ffffff"></line>
-            <line x1="720" y1="36" x2="720" y2="285" stroke="#ffffff"></line>
+            <line x1="120" y1="36" x2="120" y2="325" stroke="#ffffff"></line>
+            <line x1="320" y1="36" x2="320" y2="325" stroke="#ffffff"></line>
+            <line x1="520" y1="36" x2="520" y2="325" stroke="#ffffff"></line>
+            <line x1="720" y1="36" x2="720" y2="325" stroke="#ffffff"></line>
           </g>
 
-          <path d="M40 110C130 100 214 102 300 126C380 149 442 178 522 176C592 174 648 150 714 142C792 133 876 143 960 164L960 208C878 194 794 191 718 200C650 208 593 229 520 231C439 234 375 209 294 188C214 168 129 165 40 174Z" fill="url(#g1)"></path>
-          <path d="M40 198C134 190 212 182 292 192C362 201 420 223 486 236C564 252 644 248 724 219C798 193 872 165 960 148L960 196C880 212 807 237 732 256C646 279 561 283 476 268C404 256 346 232 282 224C206 214 129 220 40 228Z" fill="url(#g2)"></path>
-          <path d="M520 214C573 196 621 194 666 202C707 209 740 229 776 245C812 261 856 270 908 272C927 273 944 273 960 272L960 304C943 304 925 303 904 301C847 297 798 284 756 266C721 252 692 236 657 231C615 225 572 231 520 246Z" fill="url(#g3)"></path>
+          <path d="M40 104C136 96 220 99 300 122C386 146 444 173 522 171C594 169 651 146 716 138C798 129 879 139 960 159L960 201C878 188 796 186 719 194C652 201 594 221 520 224C441 227 380 204 294 183C214 163 132 160 40 170Z" fill="url(#g1)"></path>
+          <path d="M40 192C132 183 211 178 292 189C366 199 425 221 490 234C566 249 646 244 724 216C798 190 873 163 960 147L960 191C880 208 808 232 734 251C647 273 563 276 478 263C403 251 345 228 281 219C206 208 126 214 40 224Z" fill="url(#g2)"></path>
+          <path d="M250 228C320 220 382 218 438 229C498 241 548 261 606 270C667 279 729 275 792 255C850 236 906 221 960 214L960 239C907 245 851 258 791 275C724 293 657 298 595 289C537 281 490 261 432 251C376 241 315 243 250 252Z" fill="url(#g3)"></path>
+          <path d="M420 265C486 258 544 260 598 270C649 280 694 295 740 303C790 312 843 312 904 304C924 301 942 299 960 297L960 316C942 318 924 320 903 323C838 331 779 330 724 319C676 310 634 296 588 289C537 282 481 283 420 289Z" fill="url(#g4)"></path>
+          <path d="M520 292C578 288 630 289 680 296C731 303 777 314 821 320C865 326 911 328 960 324L960 337C910 341 861 339 814 334C768 329 724 319 674 313C626 307 575 306 520 310Z" fill="url(#g5)"></path>
 
-          <polyline fill="none" stroke="#ffd8aa" stroke-width="2" points="40,110 160,104 300,126 520,176 714,142 960,164"></polyline>
-          <polyline fill="none" stroke="#9bf0df" stroke-width="2" points="40,198 180,186 292,192 486,236 724,219 960,148"></polyline>
-          <polyline fill="none" stroke="#c4cdff" stroke-width="2" points="520,214 600,198 666,202 776,245 908,272 960,272"></polyline>
+          <text x="150" y="92" fill="#ffd7a6" font-size="15">Crypto Policy Pivot</text>
+          <text x="600" y="193" fill="#b2fff0" font-size="15">AI Infra Overbuild</text>
+          <text x="498" y="246" fill="#d7e0ff" font-size="14">ETH ETF Flow Repricing</text>
+          <text x="624" y="290" fill="#e4d9ff" font-size="13">Solana Consumer / Base / DePIN cluster</text>
+          <text x="735" y="332" fill="#c8cee2" font-size="12">Rumor layer: TON / Altseason chatter</text>
 
-          <text x="150" y="96" fill="#ffd7a6" font-size="15">Crypto Policy Pivot</text>
-          <text x="600" y="195" fill="#b2fff0" font-size="15">AI Infra Overbuild</text>
-          <text x="760" y="292" fill="#d2d9ff" font-size="15">Power Constraint Branch</text>
-
-          <text x="105" y="302" fill="#8fa0ca" font-size="13">Week 1</text>
-          <text x="305" y="302" fill="#8fa0ca" font-size="13">Week 2</text>
-          <text x="505" y="302" fill="#8fa0ca" font-size="13">Week 3</text>
-          <text x="705" y="302" fill="#8fa0ca" font-size="13">Week 4</text>
+          <text x="105" y="342" fill="#8fa0ca" font-size="13">Week 1</text>
+          <text x="305" y="342" fill="#8fa0ca" font-size="13">Week 2</text>
+          <text x="505" y="342" fill="#8fa0ca" font-size="13">Week 3</text>
+          <text x="705" y="342" fill="#8fa0ca" font-size="13">Week 4</text>
         </svg>
       </div>
       <div class="chips" style="margin-top:16px;">
-        <span class="chip">Overview first</span>
-        <span class="chip">Ongoing narratives</span>
-        <span class="chip">Growth / tension / branching</span>
+        <span class="chip">thickness = attention share</span>
+        <span class="chip">y-position = conviction + confidence adjustment</span>
+        <span class="chip">weak signal / rumor layer included</span>
       </div>
     </section>
 
     <section class="grid metrics">
-      <div class="metric"><div class="label">Narratives</div><div class="value">2</div><div class="hint">Current mock set</div></div>
-      <div class="metric"><div class="label">Rising</div><div class="value">2</div><div class="hint">Positive recent delta</div></div>
-      <div class="metric"><div class="label">Contested</div><div class="value">1</div><div class="hint">Needs active counter-reading</div></div>
+      <div class="metric"><div class="label">Narratives</div><div class="value">9</div><div class="hint">from strong to rumor-level</div></div>
+      <div class="metric"><div class="label">Top layer</div><div class="value">2</div><div class="hint">high conviction narratives</div></div>
+      <div class="metric"><div class="label">Low / rumor</div><div class="value">4</div><div class="hint">weak signal zone</div></div>
       <div class="metric"><div class="label">Mode</div><div class="value">Static</div><div class="hint">GitHub Pages compatible</div></div>
     </section>
 
     <section class="grid">
-      <article class="card">
-        <h2 class="card-title">Crypto Policy Pivot</h2>
-        <div class="row">
-          <div class="col-main">
-            <div class="meta">
-              <span class="badge contested">contested</span>
-              <span class="delta-up">+4</span>
-              <span class="hint">Attention score 19</span>
-            </div>
-            <p class="sub" style="margin:0 0 10px; max-width:none;">U.S. policy tone toward crypto may be improving, but implementation durability remains contested.</p>
-            <div class="chips">
-              <span class="chip">policy tone shift</span>
-              <span class="chip">regulatory durability</span>
-            </div>
-            <a href="./narratives/crypto-policy-pivot.html">Open demo narrative</a>
-          </div>
-          <div class="col-side">
-            <svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,20 50,10 75,25 100,5" /></svg>
-            <div class="hint">Claims 2 · Counterpoints 2 · Evidence 3</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2 class="card-title">AI Infra Overbuild</h2>
-        <div class="row">
-          <div class="col-main">
-            <div class="meta">
-              <span class="badge growing">growing</span>
-              <span class="delta-up">+4</span>
-              <span class="hint">Attention score 22</span>
-            </div>
-            <p class="sub" style="margin:0 0 10px; max-width:none;">AI infrastructure spending is accelerating faster than proven monetization, strengthening the overbuild narrative.</p>
-            <div class="chips">
-              <span class="chip">infra capex</span>
-              <span class="chip">monetization lag</span>
-            </div>
-            <a href="./narratives/ai-infra-overbuild.html">Open demo narrative</a>
-          </div>
-          <div class="col-side">
-            <svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,34 50,22 75,10 100,0" /></svg>
-            <div class="hint">Claims 2 · Counterpoints 2 · Evidence 3</div>
-          </div>
-        </div>
-      </article>
+      <article class="card"><h2 class="card-title">Crypto Policy Pivot</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge contested">contested</span><span class="delta-up">+4</span><span class="hint">Attention score 19</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">U.S. policy tone toward crypto may be improving, but implementation durability remains contested.</p><div class="chips"><span class="chip">policy tone shift</span><span class="chip">regulatory durability</span></div><a href="./narratives/crypto-policy-pivot.html">Open demo narrative</a></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,20 50,10 75,25 100,5" /></svg><div class="hint">High layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">AI Infra Overbuild</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">growing</span><span class="delta-up">+4</span><span class="hint">Attention score 22</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">AI infrastructure spending is accelerating faster than proven monetization, strengthening the overbuild narrative.</p><div class="chips"><span class="chip">infra capex</span><span class="chip">monetization lag</span></div><a href="./narratives/ai-infra-overbuild.html">Open demo narrative</a></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,34 50,22 75,10 100,0" /></svg><div class="hint">High layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">Ethereum ETF Flow Repricing</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">growing</span><span class="delta-up">+3</span><span class="hint">Attention score 16</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">The market is repricing ETH around changing ETF flow expectations and rotation logic.</p><div class="chips"><span class="chip">ETF flows</span><span class="chip">ETH rotation</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,30 50,22 75,12 100,0" /></svg><div class="hint">Mid layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">Stablecoin Payments Expansion</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">stabilizing</span><span class="delta-flat">0</span><span class="hint">Attention score 13</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">Stablecoins are increasingly framed as the most concrete crypto utility narrative.</p><div class="chips"><span class="chip">stablecoins</span><span class="chip">payments rails</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,30 25,24 50,18 75,14 100,14" /></svg><div class="hint">Mid-high layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">Solana Consumer Breakout</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">growing</span><span class="delta-up">+2</span><span class="hint">Attention score 14</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">Consumer-facing apps on Solana are again being framed as the chain's strongest narrative edge.</p><div class="chips"><span class="chip">consumer apps</span><span class="chip">user traction</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,38 25,34 50,26 75,12 100,4" /></svg><div class="hint">Low-mid layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">DePIN Reacceleration</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">emerging</span><span class="delta-up">+3</span><span class="hint">Attention score 9</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">DePIN is re-entering conversation as a hardware-linked narrative tied to AI and edge infrastructure.</p><div class="chips"><span class="chip">DePIN</span><span class="chip">infra adjacency</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,34 50,28 75,18 100,0" /></svg><div class="hint">Weak signal</div></div></div></article>
+      <article class="card"><h2 class="card-title">Base Ecosystem Acceleration</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">emerging</span><span class="delta-up">+3</span><span class="hint">Attention score 11</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">Base is being reframed as a distribution and app layer narrative rather than just another L2.</p><div class="chips"><span class="chip">Base</span><span class="chip">distribution engine</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,30 50,25 75,14 100,0" /></svg><div class="hint">Weak signal</div></div></div></article>
+      <article class="card"><h2 class="card-title">Telegram x TON Consumer Rumor</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">emerging</span><span class="delta-up">+3</span><span class="hint">Attention score 7</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">A weaker rumor-layer narrative that Telegram-linked distribution could reignite TON usage expectations.</p><div class="chips"><span class="chip">TON</span><span class="chip">consumer rumor</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,32 50,32 75,18 100,0" /></svg><div class="hint">Rumor layer</div></div></div></article>
+      <article class="card"><h2 class="card-title">Altseason Rotation Chatter</h2><div class="row"><div class="col-main"><div class="meta"><span class="badge growing">emerging</span><span class="delta-up">+2</span><span class="hint">Attention score 10</span></div><p class="sub" style="margin:0 0 10px; max-width:none;">A broad low-quality market narrative suggesting imminent alt rotation, driven more by chatter than durable evidence.</p><div class="chips"><span class="chip">altseason</span><span class="chip">rotation chatter</span></div></div><div class="col-side"><svg class="sparkline" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline fill="none" stroke="#aab7ff" stroke-width="2" points="0,40 25,34 50,28 75,14 100,4" /></svg><div class="hint">Rumor layer</div></div></div></article>
     </section>
   </div>
 </body>
