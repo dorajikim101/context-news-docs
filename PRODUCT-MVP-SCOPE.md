@@ -114,14 +114,30 @@
 - 왼쪽으로 drag/pan 하면 과거 흐름이 이어져 보이는 구조
 
 ### 시각 변수 원칙
-- **두께(thickness)** = Attention Share
-  - 현재 전체 서사 생태계에서 차지하는 가시적 비중
+- **두께(thickness)** = 산업 영향 가중 Attention Share
+  - 단순 언급량이 아니라, 실제 산업에 미치는 영향력이 큰 층(정책/기관/거시/핵심 자금/핵심 플레이어)의 비중을 더 강하게 반영한 weighted share
+  - 다만 작은 서사가 완전히 사라지지 않도록 curve / compression을 적용해 시각적으로는 최소 가시성을 보장
 - **세로 위치(y-position)** = Conviction 중심 + Confidence 보정
   - Conviction이 주축
   - Confidence는 보조적으로 위로 올리는 가중치
   - 개념적으로는 `Y = Conviction 중심 + Confidence 보정값`
 - **색/배지** = State
   - emerging / growing / contested / stabilizing / fading
+
+
+### 두께 계산 원칙
+메인 그래프의 두께는 순수 attention count가 아니라, **실제 산업 영향력에 가까운 weighted thickness**를 지향한다.
+
+예시 원칙:
+- 정책/기관/거시/핵심 자금 집단에서 붙는 attention은 더 높은 가중치
+- 핵심 VC/재단/거래소/주요 리서치의 attention은 중상위 가중치
+- proxy / 커뮤니티 / rumor 계층 attention은 더 낮은 가중치
+- 하지만 작은 서사가 완전히 보이지 않으면 안 되므로, 최종 시각화에는 비선형 curve를 적용
+
+개념적으로는:
+- raw attention → 영향력 가중치 반영 → curve/compression 적용 → 최종 thickness
+
+즉 그래프에서 두꺼운 서사는 “단순히 많이 언급된 서사”가 아니라, **실제 산업에 미치는 영향력을 더 강하게 반영한 서사**에 가깝다.
 
 ### 해석 원칙
 - 두껍고 위에 있는 서사:
