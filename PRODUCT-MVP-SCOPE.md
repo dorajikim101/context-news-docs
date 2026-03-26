@@ -114,8 +114,9 @@
 - 왼쪽으로 drag/pan 하면 과거 흐름이 이어져 보이는 구조
 
 ### 시각 변수 원칙
-- **두께(thickness)** = 산업 영향 가중 Attention Share
-  - 단순 언급량이 아니라, 실제 산업에 미치는 영향력이 큰 층(정책/기관/거시/핵심 자금/핵심 플레이어)의 비중을 더 강하게 반영한 weighted share
+- **두께(thickness)** = 산업 영향 중심 + 약한 attention 가중이 들어간 weighted share
+  - 단순 언급량이 아니라, 실제 산업에 미치는 영향력이 큰 층(정책/기관/거시/핵심 자금/핵심 플레이어)의 비중을 더 강하게 반영
+  - 여기에 언급량/주목도(attention)도 보조 가중치로 포함하되, 산업 영향 가중보다 약하게 반영
   - 다만 작은 서사가 완전히 사라지지 않도록 curve / compression을 적용해 시각적으로는 최소 가시성을 보장
 - **세로 위치(y-position)** = Conviction 중심 + Confidence 보정
   - Conviction이 주축
@@ -132,12 +133,24 @@
 - 정책/기관/거시/핵심 자금 집단에서 붙는 attention은 더 높은 가중치
 - 핵심 VC/재단/거래소/주요 리서치의 attention은 중상위 가중치
 - proxy / 커뮤니티 / rumor 계층 attention은 더 낮은 가중치
+- 전체 언급량 자체도 반영하지만, 산업 영향 가중보다 약한 비중으로 넣음
 - 하지만 작은 서사가 완전히 보이지 않으면 안 되므로, 최종 시각화에는 비선형 curve를 적용
 
 개념적으로는:
-- raw attention → 영향력 가중치 반영 → curve/compression 적용 → 최종 thickness
+- raw attention + source-layer impact weighting → curve/compression 적용 → 최종 thickness
 
-즉 그래프에서 두꺼운 서사는 “단순히 많이 언급된 서사”가 아니라, **실제 산업에 미치는 영향력을 더 강하게 반영한 서사**에 가깝다.
+즉 그래프에서 두꺼운 서사는 “단순히 많이 언급된 서사”가 아니라, **실제 산업 영향력을 중심으로 하되 attention도 일부 반영한 서사**에 가깝다.
+
+### 색상 표현 원칙
+색상 진하기는 attention을 더 직접적으로 반영한다.
+
+- 많이 언급되고 자주 회자되는 서사일수록 더 진하게
+- 덜 언급되고 약한 서사일수록 더 옅게
+- 즉 두께는 산업 영향 중심, 색상은 현재 화제성/언급량 중심으로 분리
+
+개념적으로는:
+- thickness ≈ industry impact weighted share + small attention adjustment
+- color intensity ≈ attention level
 
 ### 해석 원칙
 - 두껍고 위에 있는 서사:

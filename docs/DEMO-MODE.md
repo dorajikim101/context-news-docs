@@ -14,7 +14,8 @@ The repository contains both a real app scaffold and a static concept demo. For 
 - Landing shows a combined narrative overview first
 - Below that, cards show individual narratives
 - The overview includes not only strong narratives but also lower-layer weak signals and rumor-level narratives
-- thickness = industry-impact-weighted attention share with curve/compression so small narratives remain visible
+- thickness = industry-impact-weighted share with a smaller attention component and curve/compression so small narratives remain visible
+- color intensity = attention level
 - y-position = conviction-first, confidence-adjusted composite
 
 
